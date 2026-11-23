@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ángel — Desarrollador de software</title>
+<title>Dev Angel</title>
 <meta name="description" content="Portafolio de Ángel, desarrollador de software enfocado en aplicaciones web con .NET, Angular y PostgreSQL.">
 <meta name="theme-color" content="#03050b">
 <link rel="preload" href="assets/clouds.webp" as="image" type="image/webp">
@@ -73,6 +73,105 @@ a{color:#a9cfff}a:hover{color:#e8f3ff}
 .card:hover{border-color:rgba(169,207,255,.45);box-shadow:0 0 0 1px rgba(169,207,255,.12),0 20px 60px -20px rgba(93,151,255,.35)}
 .btn-primary:hover{background:#ffffff}
 .btn-ghost:hover{background:rgba(169,207,255,.1)}
+
+/* ---------- proyectos ---------- */
+.projects{display:flex;flex-direction:column;gap:28px}
+.project{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);border-radius:20px;border:1px solid rgba(169,207,255,.14);background:rgba(8,13,24,.93);overflow:hidden}
+.project-media{display:flex;align-items:center;padding:40px 44px 92px;border-right:1px solid rgba(169,207,255,.1);background:radial-gradient(ellipse at 15% 0%, color-mix(in srgb, var(--brand) 22%, transparent), transparent 60%), radial-gradient(ellipse at 90% 100%, rgba(93,151,255,.18), transparent 60%), #0b1324}
+.project.flip .project-media{order:2;border-right:0;border-left:1px solid rgba(169,207,255,.1)}
+.shot{display:block;border-radius:12px;overflow:hidden;background:#0d1628;border:1px solid rgba(169,207,255,.22);box-shadow:0 30px 60px -24px rgba(0,0,0,.85);text-decoration:none;cursor:zoom-in;transition:transform .35s ease, border-color .35s, box-shadow .35s}
+.shot:hover,.shot:focus-visible{transform:translateY(-4px);border-color:rgba(169,207,255,.55);box-shadow:0 36px 70px -24px rgba(0,0,0,.9),0 0 0 1px rgba(169,207,255,.15)}
+.shot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.shot-bar{display:flex;align-items:center;gap:6px;height:28px;padding:0 10px 0 12px;background:#121c30;border-bottom:1px solid rgba(169,207,255,.12);font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#8a9cb8}
+.shot-bar i{flex:none;width:8px;height:8px;border-radius:50%;background:rgba(169,207,255,.22)}
+.shot-bar span{margin-left:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot-bar svg{flex:none;margin-left:auto;opacity:.7}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.shot-stack{position:relative;width:100%}
+.shot-float{position:absolute;z-index:2;right:-24px;bottom:-60px;width:46%}
+.project.flip .shot-float{right:auto;left:-24px}
+
+.project-body{padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:18px}
+.project-eyebrow{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font:500 12px/1.4 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#9aadc8}
+.project-eyebrow b{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--brand)}
+.project-eyebrow b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 12px var(--brand)}
+.project h3{margin:0;font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.4vw,28px);line-height:1.2;font-weight:600;color:#eef4fd}
+.project-desc{margin:0;font-size:15.5px;line-height:1.7;color:#b4c1d4}
+.stack-list{margin:6px 0 0;padding:18px 0 0;border-top:1px solid rgba(169,207,255,.12);display:grid;gap:10px}
+.stack-list div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;align-items:start}
+.stack-list dt{padding-top:6px;font:500 11px/1.3 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a9cb8}
+.stack-list dd{margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:400 12px/1.2 'JetBrains Mono',monospace;padding:6px 10px;border-radius:6px;background:rgba(169,207,255,.08);border:1px solid rgba(169,207,255,.1);color:#c5d6ee}
+.project-link{align-self:flex-start;font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+
+@media (max-width: 860px){
+  .project{grid-template-columns:minmax(0,1fr)}
+  .project-media,.project.flip .project-media{order:0;padding:24px 28px 64px;border:0;border-bottom:1px solid rgba(169,207,255,.1)}
+  .shot-float{width:50%;right:-14px;bottom:-44px}
+  .project.flip .shot-float{left:-14px}
+}
+@media (max-width: 420px){
+  .stack-list div{grid-template-columns:minmax(0,1fr);gap:6px}
+  .stack-list dt{padding-top:0}
+}
+
+/* ---------- formación ---------- */
+.edu-panel{padding:clamp(28px,5vw,64px);border-radius:24px;background:rgba(5,9,17,.88);border:1px solid rgba(169,207,255,.12);display:flex;flex-direction:column;gap:56px}
+.edu-head{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px 48px;align-items:end}
+.edu-label{margin:0;font:500 12px/1.4 'JetBrains Mono',monospace;letter-spacing:.14em;color:#9aadc8}
+.uni{display:flex;gap:20px;align-items:flex-start;padding:28px;border-radius:16px;border:1px solid rgba(169,207,255,.16);background:linear-gradient(135deg, rgba(93,151,255,.1), rgba(8,13,24,.4))}
+.uni-icon{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:rgba(169,207,255,.1);border:1px solid rgba(169,207,255,.2)}
+.uni h3{margin:6px 0 6px;font-family:'Space Grotesk',sans-serif;font-size:21px;line-height:1.25;font-weight:600;color:#eef4fd}
+.uni p.uni-career{margin:0;font-size:15px;line-height:1.6;color:#b4c1d4}
+.live{display:inline-flex;align-items:center;gap:8px}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:#6ee7a8;box-shadow:0 0 0 0 rgba(110,231,168,.6);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(110,231,168,.55)}70%,100%{box-shadow:0 0 0 8px rgba(110,231,168,0)}}
+
+.certs-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding-bottom:20px;margin-bottom:24px;border-bottom:1px solid rgba(169,207,255,.14)}
+.certs-head h3{margin:8px 0 0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;color:#eef4fd}
+.platforms{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:#c3cfe0}
+.platforms li{display:inline-flex;align-items:center;gap:8px}
+.platforms li::before,.cert-platform::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--p)}
+.p-udemy{--p:#c39bff}.p-cf{--p:#5fe0c0}.p-dt{--p:#ffb86b}
+
+.cert-grid{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:16px}
+.cert{flex:1 1 280px;display:flex;flex-direction:column;gap:12px;padding:24px;border-radius:16px;border:1px solid rgba(169,207,255,.14);background:rgba(8,13,24,.9);position:relative;overflow:hidden}
+.cert::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--p);opacity:.75}
+.cert-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:500 12px/1.3 'JetBrains Mono',monospace;letter-spacing:.06em}
+.cert-platform{display:inline-flex;align-items:center;gap:8px;color:#dce8f8}
+.cert-top time{color:#8a9cb8}
+.cert h4{margin:0;font-family:'Space Grotesk',sans-serif;font-size:18.5px;line-height:1.3;font-weight:600;color:#eef4fd}
+.cert-by{margin:-4px 0 0;font-size:14px;line-height:1.5;color:#9aadc8}
+.cert-foot{margin-top:auto;padding-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.cert-dur{font:400 12px 'JetBrains Mono',monospace;color:#8a9cb8}
+.cert-links{margin-left:auto;display:flex;flex-wrap:wrap;gap:4px 14px}
+.cert-links a{display:inline-flex;align-items:center;gap:6px;min-height:36px;font-size:14px;font-weight:500;text-decoration:none}
+
+/* ---------- visor de capturas ---------- */
+html:has(.lightbox[open]){overflow:hidden}
+.lightbox{padding:0;border:0;margin:0;inset:0;width:100%;height:100%;max-width:none;max-height:none;background:transparent;color:#e3eaf5;overflow:hidden;font-family:Inter,system-ui,sans-serif}
+.lightbox[open]{display:flex;align-items:center;justify-content:center}
+.lightbox::backdrop{background:rgba(3,5,11,.9);backdrop-filter:blur(6px)}
+.lightbox figure{margin:0;padding:72px 84px;box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.lightbox img{display:block;max-width:100%;max-height:calc(100% - 40px);width:auto;height:auto;border-radius:10px;border:1px solid rgba(169,207,255,.25);box-shadow:0 40px 100px -30px rgba(0,0,0,.9);background:#0d1628}
+.lightbox figcaption{font-size:14px;color:#c3cfe0;text-align:center}
+.lightbox figcaption span{font-family:'JetBrains Mono',monospace;font-size:12px;color:#8a9cb8;margin-left:10px}
+.lb-btn{position:fixed;display:grid;place-items:center;width:48px;height:48px;border-radius:999px;border:1px solid rgba(169,207,255,.3);background:rgba(8,13,24,.85);color:#e8f3ff;cursor:pointer;transition:background .2s,border-color .2s}
+.lb-btn[hidden]{display:none}
+.lb-btn:hover{background:rgba(169,207,255,.16);border-color:rgba(169,207,255,.6)}
+.lb-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lb-close{top:18px;right:18px}
+.lb-prev{left:18px;top:50%;transform:translateY(-50%)}
+.lb-next{right:18px;top:50%;transform:translateY(-50%)}
+@media (max-width: 700px){
+  .lightbox figure{padding:72px 16px 96px}
+  .lb-prev,.lb-next{top:auto;bottom:22px;transform:none}
+  .lb-prev{left:calc(50% - 60px)}.lb-next{right:calc(50% - 60px)}
+}
+@media (prefers-reduced-motion: reduce){
+  .shot{transition:none}.shot:hover,.shot:focus-visible{transform:none}
+  .live::before{animation:none}
+}
 </style>
 </head>
 <body>
@@ -232,65 +331,171 @@ a{color:#a9cfff}a:hover{color:#e8f3ff}
       <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .16em; color: var(--accent); text-shadow: 0 2px 12px #03050b">04 — PROYECTOS DESTACADOS</p>
       <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -.02em; color: #f2f7ff; text-shadow: 0 2px 24px #03050b">Software pensado para quien lo usa todos los días.</h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
-      <article class="card" style="border-radius: 18px; border: 1px solid rgba(169,207,255,.14); background: rgba(8,13,24,.93); overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 240px; background: radial-gradient(ellipse at 30% 0%, rgba(93,151,255,.28), rgba(10,17,32,0) 70%), #0d1628; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(169,207,255,.1)">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8a9cb8">[CAPTURA DEL PROYECTO]</span>
-        </div>
-        <div style="padding: 32px; display: flex; flex-direction: column; gap: 16px; flex: 1">
-          <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600; color: #eef4fd">Sistema de gestión para restaurante de comida rápida</h3>
-          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #b4c1d4">Mejora la comunicación y coordinación entre los roles que atienden al cliente. Agiliza el flujo de trabajo, facilita la transmisión de pedidos e información y reduce fricciones en la operación diaria.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 12px; border-radius: 6px; background: rgba(169,207,255,.08); color: #c5d6ee">[TECNOLOGÍA]</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 12px; border-radius: 6px; background: rgba(169,207,255,.08); color: #c5d6ee">[TECNOLOGÍA]</span>
-          </div>
-          <a href="#proyectos" style="font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px">Ver repositorio
+    <div class="projects">
+
+      <!-- Proyecto 1: FASTCOM -->
+      <article class="card project" style="--brand: #ff7a3d">
+        <div class="project-media"><div class="shot-stack">
+          <a class="shot shot-float" href="assets/proyecto1/image1.png" data-gallery="fastcom" data-caption="FASTCOM · Inicio de sesión">
+            <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Inicio de sesión</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg></span>
+            <picture>
+              <source srcset="assets/proyecto1/image1.webp" type="image/webp">
+              <img src="assets/proyecto1/image1.png" width="841" height="581" loading="lazy" decoding="async" alt="Pantalla de inicio de sesión de FASTCOM, sistema de gestión de comandas">
+            </picture>
+          </a>
+          <a class="shot" href="assets/proyecto1/image2.png" data-gallery="fastcom" data-caption="FASTCOM · Panel de ventas del administrador">
+            <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Panel de ventas</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg></span>
+            <picture>
+              <source srcset="assets/proyecto1/image2.webp" type="image/webp">
+              <img src="assets/proyecto1/image2.png" width="1371" height="960" loading="lazy" decoding="async" alt="Panel de administración de FASTCOM con calendario de ventas y totales por área, gastos y dinero en caja">
+            </picture>
+          </a>
+        </div></div>
+        <div class="project-body">
+          <p class="project-eyebrow"><b>FASTCOM</b> Gestión de comandas</p>
+          <h3>Sistema de gestión para restaurante de comida rápida</h3>
+          <p class="project-desc">Mejora la comunicación y coordinación entre los roles que atienden al cliente. Agiliza el flujo de trabajo, facilita la transmisión de pedidos e información y reduce fricciones en la operación diaria.</p>
+          <dl class="stack-list">
+            <div><dt>App</dt><dd><span class="chip">Ionic</span><span class="chip">Angular</span><span class="chip">Capacitor</span></dd></div>
+            <div><dt>Backend</dt><dd><span class="chip">Express</span><span class="chip">Prisma</span><span class="chip">Socket.IO</span></dd></div>
+            <div><dt>Base de datos</dt><dd><span class="chip">PostgreSQL</span></dd></div>
+            <div><dt>CI/CD</dt><dd><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Webhooks</span></dd></div>
+          </dl>
+          <a class="project-link" href="#proyectos">Ver repositorio
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
           </a>
         </div>
       </article>
-      <article class="card" style="border-radius: 18px; border: 1px solid rgba(169,207,255,.14); background: rgba(8,13,24,.93); overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 240px; background: radial-gradient(ellipse at 70% 0%, rgba(93,151,255,.28), rgba(10,17,32,0) 70%), #0d1628; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(169,207,255,.1)">
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8a9cb8">[CAPTURA DEL PROYECTO]</span>
-        </div>
-        <div style="padding: 32px; display: flex; flex-direction: column; gap: 16px; flex: 1">
-          <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 600; color: #eef4fd">Sistema de gestión de servicios médicos</h3>
-          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #b4c1d4">Administra y organiza la información de los pacientes para que el personal acceda a sus datos con facilidad y la atención médica sea más ordenada y eficiente.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 12px; border-radius: 6px; background: rgba(169,207,255,.08); color: #c5d6ee">[TECNOLOGÍA]</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 12px; border-radius: 6px; background: rgba(169,207,255,.08); color: #c5d6ee">[TECNOLOGÍA]</span>
-          </div>
-          <a href="#proyectos" style="font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px">Ver repositorio
+
+      <!-- Proyecto 2: SIGMA -->
+      <article class="card project flip" style="--brand: #b49cff">
+        <div class="project-media"><div class="shot-stack">
+          <a class="shot shot-float" href="assets/proyecto2/image1.png" data-gallery="sigma" data-caption="SIGMA · Inicio de sesión">
+            <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Inicio de sesión</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg></span>
+            <picture>
+              <source srcset="assets/proyecto2/image1.webp" type="image/webp">
+              <img src="assets/proyecto2/image1.png" width="1477" height="940" loading="lazy" decoding="async" alt="Pantalla de inicio de sesión de SIGMA, sistema de expedientes y consultas médicas del Servicio Médico de la Universidad Tecnológica de Tecamachalco">
+            </picture>
+          </a>
+          <a class="shot" href="assets/proyecto2/image2-web.png" data-gallery="sigma" data-caption="SIGMA · Administración de usuarios y roles (datos personales ocultos)">
+            <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Usuarios y roles</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg></span>
+            <picture>
+              <source srcset="assets/proyecto2/image2-web.webp" type="image/webp">
+              <img src="assets/proyecto2/image2-web.png" width="1877" height="952" loading="lazy" decoding="async" alt="Administración de usuarios de SIGMA con roles de jefatura, médico y enfermería y tablets vinculadas para firmas">
+            </picture>
+          </a>
+        </div></div>
+        <div class="project-body">
+          <p class="project-eyebrow"><b>SIGMA</b> Expedientes y consultas médicas</p>
+          <h3>Sistema de gestión de servicios médicos</h3>
+          <p class="project-desc">Administra y organiza la información de los pacientes para que el personal acceda a sus datos con facilidad y la atención médica sea más ordenada y eficiente.</p>
+          <dl class="stack-list">
+            <div><dt>Frontend</dt><dd><span class="chip">Angular 21</span></dd></div>
+            <div><dt>Backend</dt><dd><span class="chip">.NET 8</span><span class="chip">SignalR</span></dd></div>
+            <div><dt>Archivos</dt><dd><span class="chip">MinIO</span></dd></div>
+            <div><dt>CI/CD</dt><dd><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Webhooks</span><span class="chip">GitHub Actions</span></dd></div>
+          </dl>
+          <a class="project-link" href="#proyectos">Ver repositorio
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
           </a>
         </div>
       </article>
+
     </div>
   </section>
 
   <!-- FORMACIÓN -->
   <section id="formacion" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; padding: 100px 24px">
-    <div style="padding: clamp(28px, 5vw, 64px); border-radius: 24px; background: rgba(5,9,17,.88); border: 1px solid rgba(169,207,255,.12); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px">
-      <div style="display: flex; flex-direction: column; gap: 20px">
-        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .16em; color: var(--accent)">05 — FORMACIÓN</p>
-        <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -.02em; color: #f2f7ff">Aprendizaje en la universidad y fuera de ella.</h2>
-      </div>
-      <div style="display: flex; flex-direction: column">
-        <div style="padding: 28px 0; border-top: 1px solid rgba(169,207,255,.16); display: flex; flex-direction: column; gap: 8px">
-          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .14em; color: #9aadc8">ACADÉMICA · EN CURSO</p>
-          <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; color: #eef4fd">Universidad Tecnológica de Tecamachalco</h3>
-          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #b4c1d4">Ingeniería en Tecnologías de la Información e Innovación Digital.</p>
+    <div class="edu-panel">
+      <div class="edu-head">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .16em; color: var(--accent)">05 — FORMACIÓN</p>
+          <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; letter-spacing: -.02em; color: #f2f7ff">Aprendizaje en la universidad y fuera de ella.</h2>
         </div>
-        <div style="padding: 28px 0; border-top: 1px solid rgba(169,207,255,.16); border-bottom: 1px solid rgba(169,207,255,.16); display: flex; flex-direction: column; gap: 12px">
-          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .14em; color: #9aadc8">COMPLEMENTARIA</p>
-          <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; color: #eef4fd">Cursos y certificaciones</h3>
-          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #b4c1d4">Constancias y certificados de cursos completados en:</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px">
-            <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(169,207,255,.25); font-size: 14px; color: #dce8f8">Udemy</span>
-            <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(169,207,255,.25); font-size: 14px; color: #dce8f8">Código Facilito</span>
-            <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(169,207,255,.25); font-size: 14px; color: #dce8f8">DevDetalles</span>
+        <div class="uni">
+          <span class="uni-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"></path><path d="M22 10v6"></path></svg></span>
+          <div>
+            <p class="edu-label"><span class="live">ACADÉMICA · EN CURSO</span></p>
+            <h3>Universidad Tecnológica de Tecamachalco</h3>
+            <p class="uni-career">Ingeniería en Tecnologías de la Información e Innovación Digital.</p>
           </div>
         </div>
+      </div>
+
+      <div>
+        <div class="certs-head">
+          <div>
+            <p class="edu-label">COMPLEMENTARIA</p>
+            <h3>Cursos y certificaciones</h3>
+          </div>
+          <ul class="platforms" aria-label="Plataformas">
+            <li class="p-udemy">Udemy</li>
+            <li class="p-cf">Código Facilito</li>
+            <li class="p-dt">DevTalles</li>
+          </ul>
+        </div>
+
+        <ol class="cert-grid">
+          <li class="cert p-cf">
+            <div class="cert-top"><span class="cert-platform">Código Facilito</span><time datetime="2026-09-16">sep 2026</time></div>
+            <h4>Curso Profesional de deploy en servidores</h4>
+            <div class="cert-foot">
+              <span class="chip">Despliegue</span><span class="cert-dur">7 h</span>
+              <span class="cert-links">
+                <a href="assets/Complementarios/CodigoFacilito/Certificado%20-%20Curso%20Profesional%20de%20deploy%20en%20servidores.pdf" target="_blank" rel="noopener" aria-label="Ver certificado de Curso Profesional de deploy en servidores (PDF, abre en otra pestaña)">Ver certificado <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+              </span>
+            </div>
+          </li>
+
+          <li class="cert p-udemy">
+            <div class="cert-top"><span class="cert-platform">Udemy</span><time datetime="2026-08-01">ago 2026</time></div>
+            <h4>ASP.NET Core y Clean Architecture con Domain Driven Design</h4>
+            <p class="cert-by">.NET University · Nico Madero</p>
+            <div class="cert-foot">
+              <span class="chip">.NET</span><span class="cert-dur">11 h</span>
+              <span class="cert-links">
+                <a href="assets/Complementarios/Udemy/UC-895b752c-3b34-4da7-8b0e-8760ce82e4df.jpg" target="_blank" rel="noopener" aria-label="Ver certificado de ASP.NET Core y Clean Architecture con Domain Driven Design (imagen, abre en otra pestaña)">Ver certificado <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+                <a href="https://ude.my/UC-895b752c-3b34-4da7-8b0e-8760ce82e4df" target="_blank" rel="noopener" aria-label="Verificar en Udemy el certificado de ASP.NET Core y Clean Architecture con Domain Driven Design">Verificar <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+              </span>
+            </div>
+          </li>
+
+          <li class="cert p-dt">
+            <div class="cert-top"><span class="cert-platform">DevTalles</span><time datetime="2025-11-26">nov 2025</time></div>
+            <h4>Angular cero a experto: con Módulos</h4>
+            <p class="cert-by">Fernando Herrera</p>
+            <div class="cert-foot">
+              <span class="chip">Angular</span>
+              <span class="cert-links">
+                <a href="assets/Complementarios/DevDetalles/Luis%20Angel%20Antonio%20Alvarez%20-%202025-11-26.pdf" target="_blank" rel="noopener" aria-label="Ver certificado de Angular cero a experto: con Módulos (PDF, abre en otra pestaña)">Ver certificado <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+              </span>
+            </div>
+          </li>
+
+          <li class="cert p-cf">
+            <div class="cert-top"><span class="cert-platform">Código Facilito</span><time datetime="2025-11-08">nov 2025</time></div>
+            <h4>Ruta de Fundamentos de Angular</h4>
+            <div class="cert-foot">
+              <span class="chip">Angular</span><span class="cert-dur">9 semanas</span>
+              <span class="cert-links">
+                <a href="assets/Complementarios/CodigoFacilito/Certificado%20-%20Ruta%20de%20Fundamentos%20de%20Angular.pdf" target="_blank" rel="noopener" aria-label="Ver certificado de Ruta de Fundamentos de Angular (PDF, abre en otra pestaña)">Ver certificado <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+              </span>
+            </div>
+          </li>
+
+          <li class="cert p-udemy">
+            <div class="cert-top"><span class="cert-platform">Udemy</span><time datetime="2025-09-22">sep 2025</time></div>
+            <h4>.NET Backend: .NET Core, SQL Server y seguridad JWT</h4>
+            <p class="cert-by">DevTalles · Teddy Paz Muñoz</p>
+            <div class="cert-foot">
+              <span class="chip">.NET</span><span class="cert-dur">11 h</span>
+              <span class="cert-links">
+                <a href="assets/Complementarios/Udemy/UC-9662cc3a-f157-4ab1-89a7-70cc8ba045db.jpg" target="_blank" rel="noopener" aria-label="Ver certificado de .NET Backend: .NET Core, SQL Server y seguridad JWT (imagen, abre en otra pestaña)">Ver certificado <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+                <a href="https://ude.my/UC-9662cc3a-f157-4ab1-89a7-70cc8ba045db" target="_blank" rel="noopener" aria-label="Verificar en Udemy el certificado de .NET Backend: .NET Core, SQL Server y seguridad JWT">Verificar <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+              </span>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
@@ -309,18 +514,18 @@ a{color:#a9cfff}a:hover{color:#e8f3ff}
     <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .16em; color: var(--accent); text-shadow: 0 2px 12px #03050b">07 — CONTACTO</p>
     <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: -.03em; color: #f2f7ff; max-width: 900px; text-shadow: 0 2px 30px #03050b">¿Tienes un proyecto en mente? Hablemos.</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 14px">
-      <a class="btn-primary" href="mailto:[TU CORREO]" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #e8f3ff; color: #08101e; text-decoration: none; font-weight: 600; font-size: 15px">
+      <a class="btn-primary" href="mailto:antonioalvarezluis.a@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #e8f3ff; color: #08101e; text-decoration: none; font-weight: 600; font-size: 15px">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
         antonioalvarezluis.a@gmail.com
       </a>
-      <a class="btn-ghost" href="#contacto" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid rgba(169,207,255,.4); color: #e8f3ff; text-decoration: none; font-size: 15px; background: rgba(3,5,11,.55)">
+      <!-- <a class="btn-ghost" href="#contacto" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid rgba(169,207,255,.4); color: #e8f3ff; text-decoration: none; font-size: 15px; background: rgba(3,5,11,.55)">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
         GitHub
       </a>
       <a class="btn-ghost" href="#contacto" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1px solid rgba(169,207,255,.4); color: #e8f3ff; text-decoration: none; font-size: 15px; background: rgba(3,5,11,.55)">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg>
         LinkedIn
-      </a>
+      </a> -->
     </div>
   </section>
 
@@ -331,5 +536,62 @@ a{color:#a9cfff}a:hover{color:#e8f3ff}
   </div>
 </div>
 </main>
+
+<!-- Visor de capturas: sin JavaScript, cada captura se abre como imagen normal -->
+<dialog id="lightbox" class="lightbox" aria-label="Captura ampliada">
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button type="button" class="lb-btn lb-close" aria-label="Cerrar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+  <button type="button" class="lb-btn lb-prev" aria-label="Captura anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+  <button type="button" class="lb-btn lb-next" aria-label="Captura siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var prev = dlg.querySelector('.lb-prev');
+  var next = dlg.querySelector('.lb-next');
+  var items = [], idx = 0;
+
+  function show(i) {
+    idx = (i + items.length) % items.length;
+    var a = items[idx], thumb = a.querySelector('img');
+    img.src = a.getAttribute('href');
+    img.alt = thumb ? thumb.alt : '';
+    cap.textContent = a.dataset.caption || '';
+    var n = document.createElement('span');
+    n.textContent = (idx + 1) + ' / ' + items.length;
+    cap.appendChild(n);
+    prev.hidden = next.hidden = items.length < 2;
+  }
+
+  document.querySelectorAll('a[data-gallery]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      e.preventDefault();
+      items = Array.prototype.slice.call(document.querySelectorAll('a[data-gallery="' + a.dataset.gallery + '"]'));
+      show(items.indexOf(a));
+      dlg.showModal();
+    });
+  });
+
+  dlg.querySelector('.lb-close').addEventListener('click', function () { dlg.close(); });
+  prev.addEventListener('click', function () { show(idx - 1); });
+  next.addEventListener('click', function () { show(idx + 1); });
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg || e.target.tagName === 'FIGURE') dlg.close();
+  });
+  dlg.addEventListener('keydown', function (e) {
+    if (items.length < 2) return;
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+  dlg.addEventListener('close', function () { img.removeAttribute('src'); });
+})();
+</script>
 </body>
 </html>
