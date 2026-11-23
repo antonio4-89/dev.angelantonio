@@ -1,4 +1,4 @@
-FROM nginx:1.27-alpine
+FROM nginx:1.30-alpine
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx-portafolio.conf /etc/nginx/conf.d/default.conf
 COPY index.html /usr/share/nginx/html/index.html
